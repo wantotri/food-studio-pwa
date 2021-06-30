@@ -37,9 +37,9 @@ const FavoriteRestaurantIdb = {
 
   async deleteAllRestaurants() {
     const allRestaurants = await this.getAllRestaurants();
-    allRestaurants.forEach(async (restaurant) => {
+    for (const restaurant of allRestaurants) {
       await this.deleteRestaurant(restaurant.id);
-    });
+    };
   },
 };
 
