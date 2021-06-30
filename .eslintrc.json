@@ -1,0 +1,40 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true,
+        "jasmine": true,
+        "codeceptjs/codeceptjs": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+        // Allow console.log()
+        "no-console": 0,
+        // Allow require from devDependencies
+        "import/no-extraneous-dependencies": [
+            "error", {
+                "devDependencies": true
+            }
+        ],
+        // Allow this._foo
+        "no-underscore-dangle": [
+            "error", {
+                "allowAfterThis": true
+            }
+        ],
+        // Change the minimum number of properties to 5
+        "object-curly-newline": [
+            "error", {
+                "multiline": true,
+                "minProperties": 5,
+                "consistent": true
+            }
+        ]
+    }
+}
